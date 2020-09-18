@@ -1,0 +1,13 @@
+#N canvas 276 308 674 452 10;
+#X text 466 81 inlets 0) float (speed) 1) float (depth) 2) float (reset)
+;
+#X text 466 164 outlets 0) signal 1) float (speed) 2) float (depth)
+;
+#X text 43 5 LFO~;
+#X obj 60 78 LFO~;
+#X obj 60 357 output~;
+#X text 80 4 Low Frequency Oscillator;
+#X text 80 22 LFO generates two types of wave \; sinewave and squarewave
+Two slider controls seepd(Hz) and depth (magitude) respectively;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;

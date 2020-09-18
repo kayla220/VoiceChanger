@@ -1,0 +1,39 @@
+#N canvas 293 130 776 737 10;
+#X obj 109 172 inlet~;
+#X obj 92 521 outlet~;
+#X obj 447 379 sig~;
+#X obj 154 396 +~;
+#X obj 154 455 *~ 0.5;
+#X obj 94 441 *~;
+#X obj 200 199 LFO~;
+#X obj 22 68 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -261234
+-1 -1 0 1;
+#X obj 21 107 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -261682
+-1 -1 0 1;
+#X text 157 66 <- adjust the speed;
+#X text 159 105 <- adjust the depth;
+#X text 16 85 0;
+#X text 142 83 50;
+#X text 15 123 0;
+#X text 146 121 1;
+#X obj 191 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -191407 -1
+-1;
+#X text 211 31 <- RESET;
+#X msg 390 69 0;
+#X msg 391 110 0;
+#X obj 355 25 inlet;
+#X connect 0 0 5 0;
+#X connect 2 0 3 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 6 2 2 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 1;
+#X connect 15 0 17 0;
+#X connect 15 0 18 0;
+#X connect 17 0 7 0;
+#X connect 18 0 8 0;
+#X connect 19 0 15 0;
+#X coords 0 -1 1 1 300 150 1 0 0;

@@ -1,0 +1,73 @@
+#N canvas 19 23 805 708 10;
+#X obj 289 28 loadbang;
+#X obj 204 264 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 205 301 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 361 261 5 0 0 0 - - -;
+#X floatatom 362 302 5 0 0 0 - - -;
+#X obj 465 218 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 429 217 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X floatatom 418 420 1 0 0 0 - - -;
+#X obj 327 597 *~;
+#X obj 365 533 clip~ -1 1;
+#X obj 365 512 *~ 1e+06;
+#X obj 327 642 outlet~;
+#X obj 324 476 spigot~;
+#X text 363 216 sinewave;
+#X text 357 230 squarewave;
+#X obj 645 332 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 523 330 outlet;
+#X obj 524 367 outlet;
+#X text 524 304 speed;
+#X text 522 386 depth;
+#X obj 200 60 inlet;
+#X obj 398 56 inlet;
+#X obj 461 57 inlet;
+#X msg 399 93 0.5;
+#X obj 324 437 osc~;
+#X msg 202 100 50;
+#X text 200 245 speed;
+#X text 203 281 depth;
+#X text 366 206 comment;
+#X text 442 406 comment;
+#X text 441 471 comment;
+#X text 100 476 controls: open and close the gates.;
+#X text 102 495 if (sinewave = 0) pass left \, else (squarewave = 1)
+pass right;
+#X text 408 219 comment;
+#X obj 155 31 f \$1;
+#X obj 363 46 f \$2;
+#X connect 0 0 6 0;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 34 0;
+#X connect 0 0 35 0;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 16 0;
+#X connect 3 0 24 0;
+#X connect 4 0 8 1;
+#X connect 4 0 17 0;
+#X connect 5 0 0 0;
+#X connect 5 0 25 0;
+#X connect 5 0 23 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 12 0 8 0;
+#X connect 12 1 10 0;
+#X connect 20 0 25 0;
+#X connect 21 0 23 0;
+#X connect 22 0 5 0;
+#X connect 23 0 2 0;
+#X connect 24 0 12 0;
+#X connect 25 0 1 0;
+#X connect 34 0 25 0;
+#X connect 35 0 23 0;
+#X coords 0 -1 1 1 350 250 1 150 150;
